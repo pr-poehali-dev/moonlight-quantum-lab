@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Register with empty fields",
+      "method": "POST",
+      "path": "/?action=register",
+      "body": {"email": "", "password": "", "name": ""},
+      "expectedStatus": 400
+    },
+    {
+      "name": "Login with empty fields",
+      "method": "POST",
+      "path": "/?action=login",
+      "body": {"email": "", "password": ""},
+      "expectedStatus": 400
+    }
+  ]
+}

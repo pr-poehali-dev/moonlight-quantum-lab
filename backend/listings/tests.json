@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Get listings list",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Create without auth",
+      "method": "POST",
+      "path": "/",
+      "body": {"title": "test"},
+      "expectedStatus": 401
+    }
+  ]
+}
